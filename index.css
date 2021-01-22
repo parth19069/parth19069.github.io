@@ -230,8 +230,12 @@ body {
     margin: 0;
     /* padding: 0; */
 }
-#proj2 .image {
-    text-align: center;
+#proj1 .image {
+    text-align: left;
+}
+
+#proj1 img {
+    width: 600px;
 }
 
 #proj2 img {
