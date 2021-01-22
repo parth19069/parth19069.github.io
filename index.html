@@ -9,37 +9,75 @@
         <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
     </head>
     <body>
-        <div id="myName">PARTH <br> CHHABRA</div>
-        <nav class="navmenu">
-            <div class="navmenuitem"><a>PROJECTS</a></div>
-            <div class="navmenuitem"><a>CP STUFF</a></div>
-            <div class="navmenuitem"><a>CONTACT ME</a></div>
-            <div id="dummy" style="clear:both;"></div>
-        </nav>
-        <div id="bioContainer">
-            <div id="photocontainer"><img src="images/myphoto.jpg" alt="Image of me" id="myPhoto"></div>
-            <div id="aboutMe">
-                <span id="greeting">Hello!<br></span>
-                My name is Parth Chhabra. I am currently a Sophomore at IIIT Delhi pursuing BTech in Computer Science and Engineering.
-                I am mainly interested in web development and algorithmic problem solving.
+        <div id="introduction">
+            <div id="myName">PARTH <br> CHHABRA</div>
+            <nav class="navmenu">
+                <div class="navmenuitem"><a>PROJECTS</a></div>
+                <div class="navmenuitem"><a>CP STUFF</a></div>
+                <div class="navmenuitem"><a>CONTACT ME</a></div>
+                <div class="dummy" style="clear:both;"></div>
+            </nav>
+            <div id="bioContainer">
+                <div id="photocontainer"><img src="images/myphoto.jpg" alt="Image of me" id="myPhoto"></div>
+                <div id="aboutMe">
+                    <span id="greeting">Hello!<br></span>
+                    My name is Parth Chhabra. I am currently a Sophomore at IIIT Delhi pursuing BTech in Computer Science and Engineering.
+                    I am mainly interested in web development and algorithmic problem solving.
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="menuitem" id="menu1">
+                    <span><i class="fa fa-file"></i></span>
+                    <br><div>RESUME</div>
+                </div>
+                <div class="menuitem" id="menu2">
+                    <span><i class="fab fa-github"></i></span>
+                    <br><div>GITHUB</div>
+                </div>
+                <div class="menuitem" id="menu3">
+                    <span><i class="fa fa-terminal"></i></span>
+                    <br><div>PROBLEM SOLVING</div>
+                </div>
             </div>
         </div>
 
-        <div class="menu">
-            <div class="menuitem" id="menu1">
-                <span><i class="fa fa-file"></i></span>
-                <br><div>RESUME</div>
+        <div id="projects">
+            <div id="projectHeading">PROJECTS</div>
+            <div class="list">
+                <div class="listitem" id="proj1">
+                    <div class="image"><img src="images/colorSwitch.png" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Color Switch Game</h2>
+                        A remake of the original Color Switch game with additional features like saving the game at any
+                        point and make local accounts. The game is made entirely in JavaFX. While the actual game has a lot
+                        of modes, we have only implemented the endless mode. Difficulty increases gradually and collected 
+                        stars can be used to revive. Collaborated with Sarthak Johari. 
+                    </div>
+                </div>
+                <div class="listitem" id="proj2">
+                    <div class="info">
+                        <h2>Handy Write: Audio / Visual learning tool</h2>
+                        Our first major project. It is an interactive tool aimed towards kids to teach them to recognise and
+                        write letters and words using audio and visual aids. We also used Arduino to manage sensors that enhanced 
+                        the overall experience of the user. This was our first project and so the code is a little messy. Collaborated with
+                        Samyak Jain and Dhroov Goel.
+                    </div>
+                    <div class="image"><img src="images/handyWrite.png" alt="Color Switch game"></div>
+                </div>
+                <div class="listitem" id="proj3">
+                    <div class="image"><img src="images/shell.jpeg" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Command Line Shell</h2>
+                        A miniature command line shell that is able to perform certain basic internal and external commands like 
+                        cd, ls, mkdir, etc using system calls. Written in C. Each command also implements two options. Even though 
+                        this is by no means a replacement for an actual shell, it is still a fun little project.
+                    </div>
+                </div>
             </div>
-            <div class="menuitem" id="menu2">
-                <span><i class="fab fa-github"></i></span>
-                <br><div>GITHUB</div>
-            </div>
-            <div class="menuitem" id="menu3">
-                <span><i class="fa fa-terminal"></i></span>
-                <br><div>PROBLEM SOLVING</div>
-            </div>
+            <div class="dummy" style="clear:both"></div>
         </div>
-        <div id="dummy"></div>
+        <!-- <div id="dummy"></div> -->
     </body>
     <script src="index.js"></script>
 </html>

@@ -1,20 +1,29 @@
+/* Initialisation */
 * {
     box-sizing: border-box;
+}
+html {
+    height: 100%;
 }
 body {
     margin: 0;
     color: rgb(39, 4, 4);
-    background-color: rgb(241, 236, 188);
     overflow-x: hidden;
+    height: 100%;
 }
 
+#introduction {
+    /* border: 10px solid black; */
+    height: auto;
+    background-color: rgb(241, 236, 188);
+}
+
+/* Bio + photo */
 #myName {
     display: inline;
     font-family: 'Orbitron';
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: bold;
-    /* text-align: center; */
-    /* border: 2px solid green; */
 }
 
 #bioContainer {
@@ -29,19 +38,13 @@ body {
     text-align: center;
     padding-left: 20px;
     padding-top: 80px;
-    /* border: 2px solid red; */
     
 }
 #myPhoto {
-    /* position: relative; */
     border-radius: 50%;
-    /* top: 3vh; */
-    /* left: 3vh; */
-    width: 400px;
-    height: 400px;
-    /* border: 5px solid white; */
+    width: 300px;
+    height: 300px;
 }
-
 #aboutMe {
     text-align: left;
     /* border: 2px solid red; */
@@ -55,11 +58,7 @@ body {
     font-size: 9vw;
     font-weight: bold;
 }
-@media (max-width: 1000px) {
-    #bioContainer {
-        flex-direction: column-reverse;
-    }
-}
+
 @media screen and (orientation: portrait) {
     #bioContainer {
         flex-direction: column;
@@ -68,6 +67,14 @@ body {
     #photocontainer {
         padding: 0;
     }
+    #myPhoto {
+        width: 400px;
+        height: 400px;
+    }
+    .navmenuitem {
+        font-size: 20px;
+    }
+    
 }
 @media screen and (orientation: landscape) {
     #bioContainer {
@@ -75,34 +82,28 @@ body {
     }
 }
 
+
+/* Important highlighted stuff */
 .menu {
     display: flex;
-    position: relative;
-    top: 50px;
     flex-direction: row;
-    /* align-content: space-between; */
     justify-content: space-around;
-    /* border: 10px solid red; */
+    margin-top: 40px;
 }
-@media (max-width: 1000px) {
+@media screen and (orientation: portrait) {
     .menu {
         flex-direction: column;
         align-items: center;
     }
 }
 .menuitem {
-    /* position: absolute; */
-    top: 80vh;
-    width: 300px;
-    /* left: 40vw; */
-    height: 300px;
-    border-radius: 50%;
-    /* border: 2px solid green; */
-    box-shadow: 10px 10px 10px rgb(2, 0, 0);
+    width: 250px;
+    height: 250px;
+    border-radius: 20%;
+    box-shadow: 5px 5px 10px rgb(2, 0, 0);
     transition-duration: 0.2s;
     background-color: rgb(172, 46, 46);
     text-align: center;
-    /* line-height: 300px; */
 }
 #dummy {
     position: relative;
@@ -113,7 +114,7 @@ body {
 }
 
 .menuitem:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
     transition-duration: 0.2s;
 }
 
@@ -130,14 +131,10 @@ body {
 }
 
 .menuitem {
-    margin: 20px 20px;
+    margin: 15px 15px;
 }
 
-.iconinfo {
-    position: relative;
-    top: -150px;
-    font-size: 1vw;
-}
+
 .menu span {
     position: relative;
     top: 60px;
@@ -145,13 +142,15 @@ body {
 }
 .menu div div {
     position: relative;
-    top: 40%;
+    top: 27%;
     font-weight: bold;
     font-size: 20px;
     transform-style: preserve-3d;
     
 }
 
+
+/* Navigation menu */
 .navmenu {
     position: relative; 
     display: inline;
@@ -168,6 +167,7 @@ body {
     font-family: 'Orbitron';
     font-weight: bold;
     font-size: 1.5vw;
+    border-bottom: 4px solid transparent;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
@@ -176,4 +176,81 @@ body {
     background-color: rgb(245, 234, 137); 
     border-bottom: 4px solid blue;
     cursor: pointer;
+}
+
+/* Projects section */
+
+#projects {
+    /* border: 10px solid red; */
+    height: auto;
+    background-color: rgb(142, 217, 223);
+    text-align: right;
+    padding-top: 30px;
+}
+
+#projectHeading {
+    display: block;
+    font-family: 'Orbitron';
+    font-size: 6vw;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.listitem {
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    justify-content: center;
+    text-align: left;
+}
+
+.listitem div {
+    /* border: 5px solid green; */
+    margin: 20px;
+    padding: 0;
+    text-align: center;
+}
+.listitem h2 {
+    font-size: 3vw;
+    font-family: 'Orbitron';
+}
+.listitem .info {
+    text-align: center;
+    flex-shrink: 100;
+    line-height: 35px;
+}
+
+.listitem .image img {
+    /* transform: scale(0.5, 0.5); */
+    text-align: center;
+    width: 70%;
+    height: 100%;
+    border-radius: 4%;
+    margin: 0;
+    /* padding: 0; */
+}
+#proj2 .image {
+    text-align: center;
+}
+
+#proj2 img {
+    width: 600px;
+    height: 400px;
+}
+#proj3 img {
+    width: 600px;
+    height: 400px;
+}
+
+@media screen and (orientation: portrait) {
+    #proj1, #proj3 {
+        flex-direction: column-reverse;
+    }
+    #proj2 {
+        flex-direction: column;
+    }
+    #projects {
+        text-align: center;
+    }
 }
