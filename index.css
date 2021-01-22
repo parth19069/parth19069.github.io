@@ -57,10 +57,7 @@ body {
 }
 @media (max-width: 1000px) {
     #bioContainer {
-        flex-direction: column;
-    }
-    #photocontainer {
-        padding: 0;
+        flex-direction: column-reverse;
     }
 }
 @media screen and (orientation: portrait) {
@@ -153,4 +150,30 @@ body {
     font-size: 20px;
     transform-style: preserve-3d;
     
+}
+
+.navmenu {
+    position: relative; 
+    display: inline;
+    /* top: -100px; */
+    /* border: 2px solid green;     */
+}
+
+.navmenuitem {
+    float: right;
+    width: 15%;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px;
+    font-family: 'Orbitron';
+    font-weight: bold;
+    font-size: 1.5vw;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.navmenuitem:hover {
+    background-color: rgb(245, 234, 137); 
+    border-bottom: 4px solid blue;
+    cursor: pointer;
 }
