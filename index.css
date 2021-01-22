@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    color: rgb(39, 4, 4);
+    background-color: rgb(241, 236, 188);
+    overflow-x: hidden;
+}
+
+#myName {
+    display: inline;
+    font-family: 'Orbitron';
+    font-size: 4vw;
+    font-weight: bold;
+    /* text-align: center; */
+    /* border: 2px solid green; */
+}
+
+#bioContainer {
+    position: relative;
+    top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#photocontainer {
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 80px;
+    /* border: 2px solid red; */
+    
+}
+#myPhoto {
+    /* position: relative; */
+    border-radius: 50%;
+    /* top: 3vh; */
+    /* left: 3vh; */
+    width: 400px;
+    height: 400px;
+    /* border: 5px solid white; */
+}
+
+#aboutMe {
+    text-align: left;
+    /* border: 2px solid red; */
+    flex-grow: 8;
+    font-size: 3vw;
+    padding: 50px;
+    color:rgb(1, 24, 85);
+}
+
+#greeting {
+    font-size: 9vw;
+    font-weight: bold;
+}
+@media (max-width: 1000px) {
+    #bioContainer {
+        flex-direction: column;
+    }
+    #photocontainer {
+        padding: 0;
+    }
+}
+@media screen and (orientation: portrait) {
+    #bioContainer {
+        flex-direction: column;
+        left: 0;
+    }
+    #photocontainer {
+        padding: 0;
+    }
+}
+@media screen and (orientation: landscape) {
+    #bioContainer {
+        flex-direction: row;
+    }
+}
+
+.menu {
+    display: flex;
+    position: relative;
+    top: 50px;
+    flex-direction: row;
+    /* align-content: space-between; */
+    justify-content: space-around;
+    /* border: 10px solid red; */
+}
+@media (max-width: 1000px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.menuitem {
+    /* position: absolute; */
+    top: 80vh;
+    width: 300px;
+    /* left: 40vw; */
+    height: 300px;
+    border-radius: 50%;
+    /* border: 2px solid green; */
+    box-shadow: 10px 10px 10px rgb(2, 0, 0);
+    transition-duration: 0.2s;
+    background-color: rgb(172, 46, 46);
+    text-align: center;
+    /* line-height: 300px; */
+}
+#dummy {
+    position: relative;
+    top: 4000px;
+    left: 0;
+    width: 0;
+    border: 20px solid green;
+}
+
+.menuitem:hover {
+    transform: scale(1.1, 1.1);
+    transition-duration: 0.2s;
+}
+
+#menu1 {
+    background-color: rgb(25, 197, 91);
+}
+
+#menu2 {
+    background-color: rgb(231, 228, 19);
+}
+
+#menu3 {
+    background-color: rgb(228, 80, 35);
+}
+
+.menuitem {
+    margin: 20px 20px;
+}
+
+.iconinfo {
+    position: relative;
+    top: -150px;
+    font-size: 1vw;
+}
+.menu span {
+    position: relative;
+    top: 60px;
+    font-size: 100px;
+}
+.menu div div {
+    position: relative;
+    top: 40%;
+    font-weight: bold;
+    font-size: 20px;
+    transform-style: preserve-3d;
+    
+}
