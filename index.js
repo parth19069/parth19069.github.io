@@ -1,3 +1,1 @@
-document.getElementById("test").onclick = function() {
-    alert("oops");
-}
+links = document.getElementsByClassName("navmenuitem");

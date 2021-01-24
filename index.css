@@ -4,6 +4,7 @@
 }
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -11,6 +12,18 @@ body {
     overflow-x: hidden;
     height: 100%;
 }
+a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid green; */
+}
+
 
 #introduction {
     /* border: 10px solid black; */
@@ -163,7 +176,9 @@ body {
     width: 15%;
     text-align: center;
     margin-right: 20px;
-    padding: 10px;
+    /* padding: 10px; */
+    height: 4vw;
+    line-height: 4vw;
     font-family: 'Orbitron';
     font-weight: bold;
     font-size: 1.5vw;
@@ -219,6 +234,7 @@ body {
     text-align: center;
     flex-shrink: 100;
     line-height: 35px;
+    font-size: 30px;
 }
 
 .listitem .image img {
@@ -249,6 +265,9 @@ body {
 }
 
 @media screen and (orientation: portrait) {
+    #proj1 .image{
+        text-align: center;
+    }
     #proj1, #proj3 {
         flex-direction: column-reverse;
     }
@@ -258,4 +277,59 @@ body {
     #projects {
         text-align: center;
     }
+    .listitem h2 {
+        font-size: 4vw;
+    }
+}
+
+
+#cpstuff {
+    /* border: 10px solid red; */
+    height: auto;
+    background-color: rgb(238, 236, 147);
+    text-align: right;
+    padding-top: 30px;
+}
+
+#cpstuffheading {
+    display: block;
+    font-family: 'Orbitron';
+    font-size: 6vw;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+
+#cpstuff1 .image {
+    text-align: left;
+}
+
+#cpstuff1 img {
+    width: 600px;
+    height: 400px;
+}
+
+#cpstuff2 img {
+    width: 600px;
+    height: 400px;
+}
+#cpstuff3 img {
+    width: 600px;
+    height: 600px;
+}
+
+@media screen and (orientation: portrait) {
+    #cpstuff1 .image{
+        text-align: center;
+    }
+    #cpstuff1, #cpstuff3 {
+        flex-direction: column-reverse;
+    }
+    #cpstuff2 {
+        flex-direction: column;
+    }
+    #cpstuff {
+        text-align: center;
+    }
+    
 }
