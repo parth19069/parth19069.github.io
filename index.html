@@ -1,47 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Socket.IO chat</title>
-    <style>
-      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    <head>
+        <title>Parth Chhabra</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+        <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-replace-svg="nest"></script>
+    </head>
+    <body>
+        <div id="introduction">
+            <div id="myName">PARTH <br> CHHABRA</div>
+            <nav class="navmenu">
+                <div class="navmenuitem"><a href="#projects">PROJECTS</a></div>
+                <div class="navmenuitem"><a href="#cpstuff">CP STUFF</a></div>
+                <div class="navmenuitem"><a>CONTACT ME</a></div>
+                <div class="dummy" style="clear:both;"></div>
+            </nav>
+            <div id="bioContainer">
+                <div id="photocontainer"><img src="images/myphoto.jpg" alt="Image of me" id="myPhoto"></div>
+                <div id="aboutMe">
+                    <span id="greeting">Hello!<br></span>
+                    My name is Parth Chhabra. I am currently a Sophomore at IIIT Delhi pursuing BTech in Computer Science and Engineering.
+                    I am mainly interested in web development and algorithmic problem solving.
+                </div>
+            </div>
 
-      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
-      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
-      #input:focus { outline: none; }
-      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+            <div class="menu">
+                <div class="menuitem" id="menu1">
+                    <span><i class="fa fa-file"></i></span>
+                    <br><div>RESUME</div>
+                </div>
+                <div class="menuitem" id="menu2">
+                    <span><i class="fab fa-github"></i></span>
+                    <br><div>GITHUB</div>
+                </div>
+                <div class="menuitem" id="menu3">
+                    <span><i class="fa fa-terminal"></i></span>
+                    <br><div>PROBLEM SOLVING</div>
+                </div>
+            </div>
+        </div>
 
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages > li { padding: 0.5rem 1rem; }
-      #messages > li:nth-child(odd) { background: #efefef; }
-    </style>
-  </head>
-  <body>
-    <ul id="messages"></ul>
-    <form id="form" action="">
-      <input id="input" autocomplete="off" /><button>Send</button>
-    </form>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-
-        var messages = document.getElementById('messages');
-        var form = document.getElementById('form');
-        var input = document.getElementById('input');
-
-        form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        if (input.value) {
-            socket.emit('chat message', input.value);
-            input.value = '';
-        }
-        });
-
-        socket.on('chat message', function(msg) {
-        var item = document.createElement('li');
-        item.textContent = msg;
-        messages.appendChild(item);
-        window.scrollTo(0, document.body.scrollHeight);
-        });
-    </script>
-  </body>
+        <div id="projects">
+            <div id="projectHeading">PROJECTS</div>
+            <div class="list">
+                <div class="listitem" id="proj1">
+                    <div class="image"><img src="images/colorSwitch.png" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Color Switch Game</h2>
+                        A remake of the original Color Switch game with additional features like saving the game at any
+                        point and make local accounts. The game is made entirely in JavaFX. While the actual game has a lot
+                        of modes, we have only implemented the endless mode. Difficulty increases gradually and collected 
+                        stars can be used to revive. Collaborated with Sarthak Johari. 
+                    </div>
+                </div>
+                <div class="listitem" id="proj2">
+                    <div class="info">
+                        <h2>Handy Write: Audio / Visual learning tool</h2>
+                        Our first major project. It is an interactive tool aimed towards kids to teach them to recognise and
+                        write letters and words using audio and visual aids. We also used Arduino to manage sensors that enhanced 
+                        the overall experience of the user. This was our first project and so the code is a little messy. Collaborated with
+                        Samyak Jain and Dhroov Goel.
+                    </div>
+                    <div class="image"><img src="images/handyWrite.png" alt="Color Switch game"></div>
+                </div>
+                <div class="listitem" id="proj3">
+                    <div class="image"><img src="images/shell.jpeg" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Command Line Shell</h2>
+                        A miniature command line shell that is able to perform certain basic internal and external commands like 
+                        cd, ls, mkdir, etc using system calls. Written in C. Each command also implements two options. Even though 
+                        this is by no means a replacement for an actual shell, it is still a fun little project.
+                    </div>
+                </div>
+            </div>
+            <div class="dummy" style="clear:both"></div>
+        </div>
+                
+        <div id="cpstuff">
+            <div id="cpstuffheading">CP STUFF</div>
+            <div class="list">
+                <div class="listitem" id="cpstuff1">
+                    <div class="image"><img src="images/hashCode.jpeg" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Google Hash Code</h2>
+                        Qualification Round:<br>
+                        International rank: 1829<br>
+                        Country rank (India): 212
+                    </div>
+                </div>
+                <div class="listitem" id="cpstuff2">
+                    <div class="info">
+                        <h2>Google Code Jam</h2>
+                        Qualification Round: Qualified<br>
+                        Round 1 rank: 1952
+                    </div>
+                    <div class="image"><img src="images/codeJam.png" alt="Color Switch game"></div>
+                </div>
+                <div class="listitem" id="cpstuff3">
+                    <div class="image"><img src="images/fhc.png" alt="Color Switch game"></div>
+                    <div class="info">
+                        <h2>Facebook Hacker Cup</h2>
+                        Qualification Round rank: 1047<br>
+                        Round 1 rank: 1929
+                    </div>
+                </div>
+            </div>
+            <div class="dummy" style="clear:both"></div>
+        </div>
+    </body>
+    <script src="index.js"></script>
 </html>
